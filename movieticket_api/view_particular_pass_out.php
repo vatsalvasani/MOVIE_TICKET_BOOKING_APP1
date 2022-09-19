@@ -39,7 +39,7 @@ else
     return;
 }
 
-$query = "SELECT * FROM `upcoming_shows` WHERE `moviename`='$moviename' AND (`date`>='$date1' AND `date`<='$date2'>)  ``";
+$query = "SELECT * FROM `passedout_shows` WHERE `movie_name`='$moviename' AND (`date`>='$date1' AND `date`<='$date2'>)  ``";
 $exe = mysqli_query($con,$query);
 
 $arr = [];

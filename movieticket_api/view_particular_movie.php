@@ -12,34 +12,27 @@ else
     return;
 }
 
-if(isset($_POST["date1"]))
+if(isset($_POST["review1"]))
 {
-    $date1 = $_POST["date1"];
+    $review1 = $_POST["review1"];
 }
 else 
 {
     return;
 }
 
-if(isset($_POST["date2"]))
+if(isset($_POST["review2"]))
 {
-    $date2 = $_POST["date2"];
+    $review2 = $_POST["review2"];
 }
 else 
 {
     return;
 }
 
-if(isset($_POST["time"]))
-{
-    $time = $_POST["time"];
-}
-else 
-{
-    return;
-}
 
-$query = "SELECT * FROM `upcoming_shows` WHERE `moviename`='$moviename' AND (`date`>='$date1' AND `date`<='$date2'>)  ``";
+
+$query = "SELECT * FROM `movies` WHERE `movie_name`='$moviename' AND (`review`>='$review1' AND `review`<='$review2'>)  ``";
 $exe = mysqli_query($con,$query);
 
 $arr = [];
